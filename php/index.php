@@ -1,5 +1,5 @@
 <?php
-require '../php-ajax-dischi/db.php';
+require '../php/db.php';
 // var_dump($data);
 
 ?>
