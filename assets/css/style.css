@@ -1,0 +1,31 @@
+/* Common rules */
+
+:root {
+    --spotify-primary: #1E2D3B;
+    --spotify-transparent: #2E3A46;
+    --spotify-light: #757779;
+    --spotify-white: #FFFFFF;
+}
+
+
+/* Utilities */
+
+.bg_primary {
+    background-color: var(--spotify-primary);
+}
+
+.bg_transparent {
+    background-color: var(--spotify-transparent);
+}
+
+.text_white {
+    color: var(--spotify-white);
+}
+
+.text_light {
+    color: var(--spotify-primary);
+}
+
+.pt-6 {
+    padding-top: 5rem;
+}
