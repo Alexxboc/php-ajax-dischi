@@ -1,3 +1,9 @@
+<?php
+require '../php-ajax-dischi/db.php';
+// var_dump($data);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +16,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="bg_primary">
     <header class="bg_transparent p-3">
         <div class="navbar">
             <div class="logo">
@@ -24,23 +30,25 @@
     <main class="pt-5">
         <div class="container">
             <div class="row row-cols-5">
-                <div class="col gy-3">
-                    <div class="card h-100 p-3 rounded-0 bg_transparent" style="width: 15rem">
-                        <img src="" class="card-img-top img-fluid" alt="" />
-                        <div class="card-body text-dark text-center">
-                            <h2 class="card-title text_white text-uppercase fs-4 fw-bold mt-3">
-                                {{ titolo }}
-                            </h2>
-                            <p class="card-text text_light fs-5 mt-3 mb-0 fw-bolder">
-                                {{ autore }}
-                            </p>
-                            <p class="card-text text_light fs-6 fw-bolder">{{ anno }}</p>
+                <?php foreach ($data['response'] as $disc) : ?>
+                    <div class="col gy-3">
+                        <div class="card h-100 p-3 rounded-0 bg_transparent" style="width: 15rem">
+                            <img src="<?= $disc['poster'] ?>" class="card-img-top img-fluid" alt="immagine <?= $disc['title'] ?>" />
+                            <div class="card-body text-dark text-center">
+                                <h2 class="card-title text_white text-uppercase fs-4 fw-bold mt-3">
+                                    <?= $disc['title'] ?>
+                                </h2>
+                                <p class="card-text text_light fs-5 mt-3 mb-0 fw-bolder">
+                                    <?= $disc['author'] ?>
+                                </p>
+                                <p class="card-text text_light fs-6 fw-bolder"><?= $disc['year']?></p>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card-body -->
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
-                </div>
-                <!-- /.col -->
+                    <!-- /.col -->
+                <?php endforeach ?>
             </div>
             <!-- /.row row-cols-5 -->
         </div>

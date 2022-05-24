@@ -1,6 +1,6 @@
 <?php
 
-$Data = [
+$data = [
     "success" => true,
     "response" => [
         [
