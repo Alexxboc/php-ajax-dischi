@@ -1,7 +1,41 @@
 @import '~/node_modules/bootstrap/scss/bootstrap.scss';
+
+/* Coomon rules */
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: white;
+    background-color: $spotify-primary;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Utilities */
+
+.bg_primary {
+    background-color: $spotify-primary;
+}
+
+.bg_transparent {
+    background-color: $spotify-transparent;
+}
+
+.text_white {
+    color: $spotify-white;
+}
+
+.text_light {
+    color: $spotify-light;
+}
+
+.pt-6 {
+    padding-top: 5rem;
 }
