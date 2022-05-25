@@ -82,7 +82,7 @@ export default {
   components: {},
   data() {
     return {
-      API_URL: "http://localhost:8080/PHP/php-ajax-dischi/php/db.php",
+      API_URL: "http://localhost:8080/PHP/php-ajax-dischi/php/api.php",
       response: null,
       musicList: null,
       disco: null,
